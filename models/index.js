@@ -1,4 +1,3 @@
-// const { UPSERT } = require('sequelize/types/query-types');
 const Answer = require('./Answer');
 const Post = require('./Post');
 const Vote = require('./Vote');
