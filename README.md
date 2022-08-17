@@ -30,8 +30,8 @@ Or insert a gif
 
 * Deployed using Heroku.
 
-## Link to deployed app ##
+
+## Link ##
 
 
-## Licences ##
-We dedicate this work to the public domain by waiving all rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
+<http://example.com/>
