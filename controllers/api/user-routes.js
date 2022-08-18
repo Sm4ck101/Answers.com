@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const auth = require('../../utils/auth');
 
 router.post('/register', async (req, res) => {
     try {
@@ -10,9 +11,11 @@ router.post('/register', async (req, res) => {
         User.create({ username, email, password }).then((newUserData)=>{
             req.session.save(()=>{
                 req.session.user_id = newUserData.id
-                res.json(newUserData)
+                res.status(201).json({ message: 'Account was created successfully' })
             })
             
+        }) .catch((error)=>{
+            res.status(500).json({message: error.message})
         })
     } catch (error) {
         console.log(error)
@@ -34,6 +37,8 @@ router.post('/login', (req, res)=>{
                 req.session.user_id = userData.id
                 res.json({ message: 'Login Succesful'})  
             })
+        })  .catch((error)=>{
+            res.status(500).json({message: error.message})
         })
     } catch (error) {
         console.log(error)
@@ -50,15 +55,6 @@ router.post('/logout', (req, res)=>{
         return res.status(400).json({ message: 'You are not logged in' })
     }
 })
-
-
-
-
-
-
-
-
-
 
 
 module.exports = router;

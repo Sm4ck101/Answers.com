@@ -4,10 +4,11 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 // const vote = require('upvote');
 const routes = require('./controllers');
+const cookieParser = require('cookie-parser')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+app.use(cookieParser())
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sessionData={
@@ -31,8 +32,7 @@ async function testDBConnection() {
 }
 testDBConnection();
 
-const auth = require('./utils/auth.js');
-app.use(auth);
+
 const hbs = exphbs.create()
 
 app.engine('handlebars', hbs.engine);
