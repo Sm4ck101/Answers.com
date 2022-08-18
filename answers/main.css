@@ -1,0 +1,43 @@
+:root {
+    --main-color: #b92b27;
+    --main-color-darker: #941e1a;
+    --white: #ffffff;
+}
+
+.text-main-color {
+    color: var(--main-color);
+}
+
+.border-main-color {
+    border-bottom-style: solid;
+    border-width: 4px;
+    border-color: var(--main-color);
+}
+
+/* icons style */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/* icons style end */
+
