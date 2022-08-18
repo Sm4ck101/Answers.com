@@ -10,6 +10,16 @@ const PORT = process.env.PORT || 3001;
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sessionData={
+    secret: 'supersecret',
+    cookie: {
+        maxAge: 1800
+    },
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({db: sequelize})
+}
+app.use(session(sessionData))
 
 async function testDBConnection() {
     try {
@@ -21,9 +31,9 @@ async function testDBConnection() {
 }
 testDBConnection();
 
-const helpers = require('./utils/helpers');
-
-const hbs = exphbs.create({ helpers })
+const auth = require('./utils/auth.js');
+app.use(auth);
+const hbs = exphbs.create()
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
