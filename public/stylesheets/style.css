@@ -48,9 +48,6 @@
   'opsz' 48
 }
 
-
-
-
 /* icons style end */
 
 .bg-second-color {
@@ -98,4 +95,14 @@
 
 .text-gray-dark {
   color: rgb(117, 117, 117);
+}
+
+.message  {
+  color: darkgreen;
+  padding: 10px;
+  text-align: center;
+}
+
+.message.error {
+  color: red;
 }

@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
     Answer.create({
-        Answer_text: req.body.Answer_text,
+        answer_text: req.body.answer_text,
         user_id: req.session.user_id,
         post_id: req.body.post_id
     })
@@ -35,7 +35,7 @@ router.delete('/:id', withAuth, (req, res) => {
                 res.status(404).json({ message: 'No answer found with this id!' });
                 return;
             }
-            res.json(dbAnswerData);
+            res.json({message: 'Answer deleted successfully'});
         })
         .catch(err => {
             console.log(err);
@@ -44,3 +44,8 @@ router.delete('/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
+
+
+// TO DO: 
+// 1. Get one answer route implementation
+// 2. Edit one answer

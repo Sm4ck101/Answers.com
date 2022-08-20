@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'post_url',
+      'post',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'post',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -78,7 +78,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    post: req.body.post,
     user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
@@ -100,7 +100,8 @@ router.put('/upvote', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
-      title: req.body.title
+      title: req.body.title,
+      post: req.body.post
     },
     {
       where: {
@@ -113,7 +114,7 @@ router.put('/:id', withAuth, (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-      res.json(dbPostData);
+      res.json({message: 'Post updated Successfully'});
     })
     .catch(err => {
       console.log(err);
@@ -133,7 +134,7 @@ router.delete('/:id', withAuth, (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-      res.json(dbPostData);
+      res.json({message: 'Post deleted successful'});
     })
     .catch(err => {
       console.log(err);
@@ -142,3 +143,5 @@ router.delete('/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
+
+// /upvote needs to be tested
