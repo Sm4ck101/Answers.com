@@ -88,3 +88,118 @@
 .message.error {
   color: red;
 }
+
+/* Homepage styling */
+
+#homepage {
+  background-color: antiquewhite;
+  min-height: 70vh;
+  padding: 20px 50px;
+}
+
+#homepage .question-form-container  {
+  width: 100%;
+}
+
+#homepage .question-form-container input {
+  width: 80%;
+  padding: 5px;
+}
+
+#homepage .question-form-container button {
+  padding: 5px 15px;
+  width: 19%;
+
+}
+
+#homepage #login-to-post  {
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+
+#homepage #login-to-post p {
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Footer Styling */
+
+footer  {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  min-height: 20vh;
+  padding-top: 10px;
+}
+
+footer div  {
+  width: 32%;
+  height: fit-content;
+  text-align: center;
+  line-height: 1;
+}
+
+footer div p  {
+  line-height: .8;
+}
+
+footer div ul {
+  list-style: none;
+}
+
+footer div ul a {
+  text-decoration: none;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Login Styling */
+
+.login-page  {
+  min-height: 71vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-page > div   {
+  width: 50%;
+  background-color: bisque;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.login-page > div:last-child   {
+  background-color: ghostwhite;
+  
+}
+
+.login-form div,
+.signup-form div {
+  padding: 10px 0;
+}
+
+.login-form div label,
+.signup-form div label {
+  width: 100px;
+}
+
+.login-form div input,
+.signup-form div input {
+  width: 80%;
+
+}
+
+.login-form div button,
+.signup-form div button {
+  width: 50%;
+  font-size: 19px;
+}
+
+/* Dashboard Styling */
+#dashboard-page {
+  min-height: 72vh;
+}
