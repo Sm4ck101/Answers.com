@@ -6,9 +6,8 @@ router.get('/', async (req, res) => {
     res.render('homepage')
 });
 
-router.get('/login', async (req, res) => {
-    console.log('Route Reached')
-    res.render('login')
-});
+router.get('/login', (req, res) => {
+    res.render('login');
+  });
 
 module.exports = router;

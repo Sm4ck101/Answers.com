@@ -1,0 +1,101 @@
+:root {
+    --main-color: #b92b27;
+    --main-color-darker: #941e1a;
+    --white: #ffffff;
+}
+
+.text-main-color {
+    color: var(--main-color);
+}
+
+.border-main-color {
+    border-bottom-style: solid;
+    border-width: 4px;
+    border-color: var(--main-color);
+}
+
+/* icons style */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
+
+/* icons style end */
+
+.bg-second-color {
+  background-color: rgb(233, 233, 233,);
+}
+
+#left-list {
+  margin-left: 20px;
+}
+
+#left-list a {
+  text-decoration: none;
+  padding: 5px;
+  color: gray;
+  font-size: 13px;
+
+}
+
+.bg-second-color {
+  background-color: rgb(233, 233, 233);
+}
+
+#left-list {
+  margin-left: 20px;
+}
+
+#left-list a {
+  text-decoration: none;
+  padding: 5px;
+  color: gray;
+  font-size: 13px;
+}
+
+#left-list img {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.border-gray {
+  border-style: solid;
+  border-color: rgb(221, 221, 221);
+  border-width: 1px;
+}
+
+.text-gray-dark {
+  color: rgb(117, 117, 117);
+}
