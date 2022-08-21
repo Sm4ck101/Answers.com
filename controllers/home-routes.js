@@ -1,14 +1,13 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-
-router.get('/', async (req, res) => {
-    console.log('Route Reached')
-    res.render('homepage')
+router.get("/", async (req, res) => {
+  console.log("Route Reached");
+  res.render("homepage");
 });
 
-router.get('/login', async (req, res) => {
-    console.log('Route Reached')
-    res.render('login')
+router.get("/login", async (req, res) => {
+  console.log("Route Reached");
+  res.render("login");
 });
 
 module.exports = router;
