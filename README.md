@@ -6,12 +6,11 @@ Answers.com allows users to:
 * Answer a question
 * Up or downvote answers to those questions
 
-![download](https://user-images.githubusercontent.com/101675147/185010186-8554b250-6861-4e58-a016-70c9f1f530e6.png)
+<img src="public\images\Screenshot 2022-08-21 182058.jpg" alt="App Screenshot"/>
 
 
 ## Features ##
 * Users are able to set up a personal profile
-* 
 
 ## Usage ## 
 
@@ -33,6 +32,6 @@ Or insert a gif
 
 - - - -
 
-### <http://example.com/>  ###
+### <https://github.com/Sm4ck101/Answers.com>  ###
 
-
+### <https://answersdotcom.herokuapp.com/>  ###
