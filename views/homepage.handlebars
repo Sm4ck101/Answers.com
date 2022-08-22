@@ -6,9 +6,26 @@
             <button type="submit">Search</button>
         </form>
     </div>
+    {{#if notLoggedIn}}
     <div id="login-to-post">
         <p><a href="/login">Login</a> To Post Your Questions</p>
     </div>
+    {{/if}}
+
+    {{#if posts.length}}
+<section>
+  <h2>Recent Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    
+    <li>
+      {{> post-info post = post}}
+      <a href="/posts/{{post.dataValues.id}}" >More Details</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
 </div>
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
