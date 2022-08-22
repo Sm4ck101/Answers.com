@@ -1,3 +1,4 @@
+{{> header loggedIn = loggedIn}}
 <div id="dashboard-page">
 <section>
   <h2>Create New Post</h2>
@@ -8,8 +9,8 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="post-content">Link</label>
+      <input id="post-content" name="post-content" />
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
@@ -20,8 +21,9 @@
   <h2>Your Posts</h2>
   <ol>
     {{#each posts as |post|}}
+    
     <li>
-      {{> post-info post}}
+      {{> post-info post = post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
@@ -30,3 +32,6 @@
 {{/if}}
 </div>
 <script src="/javascript/add-post.js"></script>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}

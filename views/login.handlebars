@@ -1,3 +1,4 @@
+{{> header loggedIn = loggedIn}}
 <div class="login-page">
   <div>
     <form class="login-form">
@@ -37,3 +38,6 @@
   </div>
 </div>
 <script src="/javascript/login.js"></script>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}

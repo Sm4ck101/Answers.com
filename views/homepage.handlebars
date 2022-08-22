@@ -1,3 +1,4 @@
+{{> header loggedIn = loggedIn}}
 <div id="homepage">
     <div class="question-form-container">
         <form>
@@ -9,3 +10,6 @@
         <p><a href="/login">Login</a> To Post Your Questions</p>
     </div>
 </div>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
