@@ -1,0 +1,14 @@
+{{> header loggedIn = loggedIn}}
+<div class="post-detail">
+  {{!-- {{> post-info post = post}} --}}
+  <h3>{{post.dataValues.title}}</h3>
+    <p>{{post.dataValues.post}}</p>
+    {{#if loggedIn}}
+    <div class="create-answer-container">
+        <form>
+            <input type="text" placeholder="Enter Your Answer" name="answer">
+            <button type="submit">Post</button>
+        </form>
+    </div>
+    {{/if}}
+</div>
