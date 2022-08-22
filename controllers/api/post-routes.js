@@ -86,12 +86,13 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", withAuth, (req, res) => {
+  console.log("Create Post")
   Post.create({
     title: req.body.title,
     post: req.body.post,
     user_id: req.session.user_id,
   })
-    .then((dbPostData) => res.json(dbPostData))
+    .then((dbPostData) => res.redirect('/dashboard/'))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);

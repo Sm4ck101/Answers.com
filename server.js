@@ -14,7 +14,7 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sessionData = {
   secret: "supersecret",
   cookie: {
-    maxAge: 1800,
+    maxAge: 1000*60*60*24,
   },
   resave: false,
   saveUninitialized: true,
@@ -32,7 +32,14 @@ async function testDBConnection() {
 }
 testDBConnection();
 
-const hbs = exphbs.create();
+const hbs = exphbs.create({
+  defaultLayout: 'main',
+  helpers: {
+    isLoggedIn: (user_id)=>{
+      return user_id;
+    }
+  }
+});
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");

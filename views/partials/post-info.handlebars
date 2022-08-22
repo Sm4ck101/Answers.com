@@ -1,9 +1,9 @@
 <article class="post">
   <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_url}})</span>
+    <a href="#" target="_blank">{{post.dataValues.title}}</a>
+    <span>({{post.dataValues.post}})</span>
   </div>
-  <div class="meta">
+  {{!-- <div class="meta">
     {{vote_count}}
     {{format_plural "point" vote_count}}
     by
@@ -12,6 +12,6 @@
     {{format_date created_at}}
     |
     <a href="/post/{{id}}">{{answers.length}}
-      {{format_plural "answer" answers.length}}</a>
-  </div>
+      {{format_plural "answer" answers.length}}</a> --}}
+  {{!-- </div> --}}
 </article>
